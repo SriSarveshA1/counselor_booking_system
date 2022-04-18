@@ -1,0 +1,19 @@
+{
+  "name": "councelor_booking",
+  "version": "1.0.0",
+  "description": "This api is used to provide services that helps to book councelors for the users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SriSarveshA1/counselor_booking_system.git"
+  },
+  "author": "SriSarvesh R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SriSarveshA1/counselor_booking_system/issues"
+  },
+  "homepage": "https://github.com/SriSarveshA1/counselor_booking_system#readme"
+}
