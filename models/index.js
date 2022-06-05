@@ -20,7 +20,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.User = require("./User.js")(sequelize, Sequelize);
-db.Role = require("./Role.js")(sequelize, Sequelize);
+db.Role = require("./Roles.js")(sequelize, Sequelize);
 db.Counselor=require("./counselor")(sequelize, Sequelize);
 
 

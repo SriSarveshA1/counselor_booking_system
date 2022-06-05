@@ -61,7 +61,7 @@ exports.update=(req, res, next) =>{
 //So we need to pass the id of the councellor that we want to check whether it is available to rent or not
 exports.isAvailRent=(req, res) => {
     Counselor.findByPk(req.params.id).then((Counselors)=>{
-        let value=Counselors.isRented;
+        let value=Counselors.isBooked;
         res.status(200).send("Is Rented: " + value);
     })
 }
@@ -86,7 +86,7 @@ exports.mutate=(req, res) => {
     if(rent){
        //renting the service
        const data={
-           isRented:"Yes",
+           isBooked:"Yes",
            UserId:req.UserId
        }
        //user should not be able to rent more than 2 Counselors at a time
@@ -103,7 +103,7 @@ exports.mutate=(req, res) => {
     if(ret){
        //returning the service
        const data={
-           isRented:"No",
+           isBooked:"No",
            UserId:null
        }
        promise=Counselor.update(data,{where:{id:{[Op.or]:req.body.ids}},returning:true}).then(()=>{
